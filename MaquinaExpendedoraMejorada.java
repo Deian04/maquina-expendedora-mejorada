@@ -26,6 +26,7 @@ public class MaquinaExpendedoraMejorada {
         totalDineroAcumulado = 0;
         estacionOrigen = origen;
         estacionDestino = destino;
+        maquinaConPremio = premios;
     }
     
     public MaquinaExpendedoraMejorada(boolean premios) {
