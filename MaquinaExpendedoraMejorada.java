@@ -99,15 +99,20 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println("# " + precioBillete + " euros.");
                 System.out.println("##################");
                 System.out.println();         
-                if (maquinaConPremio == true){
-                    double descuento = precioBillete * 0.25;
-                    System.out.println("Has recibido un premio de " + descuento + " euros.");
-                }
+                numeroBilletesVendidos += 1;
+                if (numeroBilletesVendidos % 4 == 0 ){
+                    if (numeroBilletesVendidos != 0){
+                        if (maquinaConPremio == true){
+                            double descuento = precioBillete * 0.25;
+                            System.out.println("Has recibido un premio de " + descuento + " euros.");
+                        }
+                    }
+                }    
                 // Actualiza el total de dinero acumulado en la maquina
                 totalDineroAcumulado = totalDineroAcumulado + precioBillete;
                 // Reduce el balance del cliente actual dejandole seguir utilizando la maquina
                 balanceClienteActual = balanceClienteActual - precioBillete;
-                numeroBilletesVendidos += 1;
+                
             }
             else {
                 System.out.println("Necesitas introducir " + (cantidadDeDineroQueFalta) + " euros mas!");
