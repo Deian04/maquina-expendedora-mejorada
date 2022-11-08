@@ -101,11 +101,9 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println();         
                 numeroBilletesVendidos += 1;
                 if (numeroBilletesVendidos % 4 == 0 ){
-                    if (numeroBilletesVendidos != 0){
-                        if (maquinaConPremio == true){
-                            double descuento = precioBillete * 0.25;
-                            System.out.println("Has recibido un premio de " + descuento + " euros.");
-                        }
+                    if (maquinaConPremio == true){
+                        double descuento = precioBillete * 0.25;
+                        System.out.println("Has recibido un premio de " + descuento + " euros.");
                     }
                 }    
                 // Actualiza el total de dinero acumulado en la maquina
